@@ -7,14 +7,14 @@ function SideBar(props) {
     < >
 
       <div className='sideBar_logo_container'>
-      {/* <FontAwesomeIcon icon="fa-light fa-globe" /> */}
-      <i className="fas fa-globe sideBar_logo"></i>
-         {/* <img src={props.src || "/icons/internet.png"} alt='icon' className='sideBar_logo' /> */}
+        <i className="fas fa-globe sideBar_logo"></i>
       </div>
       <div className='sideBar_text_container'>
         <div className='sideBar_text'>
+          <div>
 
-        aler
+           HELLOW <span>WORLD</span>
+          </div>
         </div>
       </div>
 
