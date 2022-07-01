@@ -170,9 +170,9 @@
   /* left: 0; */
   height: 100%;
   width: 100%;
-  background: rgb(95, 95, 95)1243;
+  background: #13233b;
   border-left: 2px solid #FC6D6D;
-  animation: typing 3s steps(10) infinite;
+  animation: typing 3s steps(8) infinite;
 }
 @keyframes typing {
   40%, 60%{
