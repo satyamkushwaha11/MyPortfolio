@@ -1,14 +1,14 @@
 
 import './App.css';
 import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
     <div className="App p-md-4 p-0">
      {/* <div className=' h-100 w-100 position-relative  '> */}
       <Layout>
-        <HomePage></HomePage>
+        <MainPage></MainPage>
       </Layout>
      {/* </div> */}
     </div>
