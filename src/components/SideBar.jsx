@@ -1,5 +1,5 @@
 import React from 'react'
-// import Font
+import MyText from './Text'
 
 function SideBar(props) {
   return (
@@ -11,10 +11,11 @@ function SideBar(props) {
       </div>
       <div className='sideBar_text_container'>
         <div className='sideBar_text'>
-          <div>
+          {/* <div>
 
            HELLOW <span>WORLD</span>
-          </div>
+          </div> */}
+          <MyText textColor={'text-red'} textSize={'1.2rem'}>HELLO WORLD</MyText>
         </div>
       </div>
 
