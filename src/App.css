@@ -107,9 +107,12 @@
 }
 
 .sideBar_logo {
-  font-size: 35px;
-  color: red;
+  font-size: 32px;
+  /* color: red; */
 
+}
+.sideBar_logo2{
+  font-size: 1.7rem !important;
 }
 
 .sideBar_text_container {
@@ -130,7 +133,7 @@
   text-transform: uppercase;
 
   font-weight: 700;
-  letter-spacing: 0.7em;
+  letter-spacing: 0.3em;
 }
 
 .sideBar_text>div {

@@ -53,7 +53,7 @@ function MainPage() {
         <div className='d-flex flex-wrap'>
           {
             cardList.map((item, index) => (
-              <ContentBox key={index} image={() => <item.image />} text={item.text} textColor={item.color} />
+              <ContentBox key={index} image={() => <item.image className=' ' />} text={item.text} textColor={item.color} />
 
             ))
           }

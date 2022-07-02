@@ -1,10 +1,12 @@
 
-import React from 'react'
+// import React, { useContext } from 'react'
 import MyImage from './MyImage'
 import SideBar from './SideBar'
+// import { UserContext } from '../App';
 
 
 function Layout(props) {
+    // const data = useContext(UserContext);
     
     return (
         <div className='d-flex  no-gutters wrapper '>
