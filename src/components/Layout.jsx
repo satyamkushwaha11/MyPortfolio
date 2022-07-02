@@ -1,4 +1,4 @@
-import { logDOM } from '@testing-library/react'
+
 import React from 'react'
 import MyImage from './MyImage'
 import SideBar from './SideBar'
