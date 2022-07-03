@@ -4,7 +4,7 @@ import { UserContext } from '../App';
 
 
 function ContentBox(props) {
-  const {setColor,setText,setIcon}=useContext(UserContext)
+  const {setColor,setText,setIcon,setPage}=useContext(UserContext)
   console.log(props, 'oooooooooooooo');
 
   const handleChange=()=>{
@@ -12,6 +12,7 @@ function ContentBox(props) {
     setColor(props.textColor)
     setText(props.text)
     setIcon(props.image)
+    setPage(props.pageNo)
   }
 
   // const text = props.text

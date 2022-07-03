@@ -5,6 +5,10 @@
   height: 100vh;
   color: white;
   background: linear-gradient(45deg, #3e526a 0%, #072142 100%);
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .App-logo {
@@ -17,21 +21,54 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.text-red{
-  color: #ff4d5a;
+
+.text-red {
+  color: #ff4d5a !important;
 }
-.text-orange{
-  color: #f78446;
+
+.text-orange {
+  color: #f78446 !important;
 }
-.text-purpul{
-  color: #8a9ff5;
+
+.text-purpul {
+  color: #8a9ff5 !important;
 }
-.text-green{
-  color: #26ba70;
+
+.text-green {
+  color: #26ba70 !important;
 }
-.text-dark-yellow{
-  color: #ada73e;
+
+.text-dark-yellow {
+  color: #ada73e !important;
 }
+.text-dull{
+  color: #a8a8a8;
+}
+
+.bg-darkBule {
+  background-color: #1d3047;
+}
+
+.bg-text-red {
+  background-color: #ff4d5a !important;
+}
+
+.bg-text-orange {
+  background-color: #f78446 !important;
+}
+
+.bg-text-purpul {
+  background-color: #8a9ff5 !important;
+}
+
+.bg-text-green {
+  background-color: #26ba70 !important;
+}
+
+.bg-text-dark-yellow {
+  background-color: #ada73e !important;
+}
+
 
 .App-header {
   background-color: #282c34;
@@ -111,7 +148,8 @@
   /* color: red; */
 
 }
-.sideBar_logo2{
+
+.sideBar_logo2 {
   font-size: 1.7rem !important;
 }
 
@@ -141,12 +179,15 @@
   color: var(--bs-heading-color);
 }
 
-/* .mainPage_contianer {
-  color: wheat;
-} */
+.mainPage_contianer {
+  overflow-y: scroll;
+}
+.mainPage_contianer::-webkit-scrollbar {
+  display: none;
+}
 
 .mainPageHeader {
-  height: 25%;
+  height: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,12 +196,11 @@
 
 .mainPageHeader_heading>div {
   font-weight: 900 !important;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .mainPage_containt {
-  height: 75%;
-
+  min-height: 75%;
   overflow: scroll;
 }
 
@@ -169,20 +209,23 @@
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.mainPage_containt {
--ms-overflow-style: none;  /* IE and Edge */
-scrollbar-width: none;  /* Firefox */
+.mainPage_containt .mainPage_contianer{
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* -------animation for heading text------- */
 .bottom-heading-wrapper {
   display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-style: italic;
 }
 
 .bottom-heading-wrapper .static-text {
   color: white;
-  font-size: 25px;
-  font-weight: 400;
 }
 
 .bottom-heading-wrapper .dynamic-texts {
@@ -196,17 +239,18 @@ scrollbar-width: none;  /* Firefox */
 
 .dynamic-texts li {
   list-style: none;
-  color: red;
-  font-size: 25px;
+  color: #ff4d5a;
+  /* font-size: 25px; */
   font-weight: 500;
   position: relative;
   /* text-align: left; */
   top: 0;
   animation: slide 8s steps(2) infinite;
 }
+
 @keyframes slide {
-  100%{
-    top:-80px
+  100% {
+    top: -80px
   }
 }
 
@@ -216,12 +260,13 @@ scrollbar-width: none;  /* Firefox */
   left: 0;
   height: 100%;
   width: 100%;
-  border-left: 2px solid red;
+  border-left: 2px solid #ff4d5a;
   background-color: #14263a;
   animation: typing 4s steps(15) infinite;
 }
 
 @keyframes typing {
+
   40%,
   60% {
     left: calc(100%);
@@ -236,16 +281,40 @@ scrollbar-width: none;  /* Firefox */
 
 
 
-.contentBox{
- min-height: 33vh ;
+.contentBox {
+  min-height: 33vh;
 }
-.contentBox_card{
+
+.contentBox_card {
   background-color: #1d3047;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.cancelLogoContainer {
+  right: 0;
+  top: 20px;
+  right: 1.5rem;
+  /* background-color: grey; */
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancelLogo {
+  line-height: 0;
+  font-size: 1.5rem !important;
+  /* background-color: grey; */
+  color: grey;
+
+}
+
 
 
 
@@ -255,9 +324,11 @@ scrollbar-width: none;  /* Firefox */
   .sideBar {
     width: 35px;
   }
-  .contentBox{
-    min-height: 21vh ;
-   }
+
+  .contentBox {
+    min-height: 21vh;
+  }
+
   .sideBar_logo {
     font-size: 30px;
   }
@@ -269,15 +340,24 @@ scrollbar-width: none;  /* Firefox */
   .sideBar_text_container {
     height: 93%;
   }
+
   .mainPageHeader_heading>div {
     font-weight: 900 !important;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
+
   .mainPage_containt {
     height: 85%;
   }
-  .mainPageHeader{
+
+  .mainPageHeader {
     height: 15%;
   }
-  
+
+  .bottom-heading-wrapper {
+
+    font-size: 1rem;
+  }
+
+
 }
