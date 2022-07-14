@@ -43,26 +43,26 @@ function AboutMe() {
   const { color, text, handelCancelPage } = useContext(UserContext)
 
   return (
-    <div className='h-100  mx-4'>
+    <div className='h-100 mx-auto' style={{ width: "90%" }}>
 
       <div className={'position-absolute cancelLogoContainer'}>
         <i className={"close-button fas fa-times-circle fa-3x cancelLogo "} onClick={handelCancelPage} />
       </div>
-      <div className='mx-3  mainPageHeader' >
-
+      <div className=' mainPageHeader' >
         <div className='mainPageHeader_heading'>
           <MyText textColor={color} className="fw-bolder">{text}</MyText>
         </div>
       </div>
-      <div>
+   
+      <div className=''>
         <div className='mb-2'>
           <span style={{ fontSize: "1.2rem" }}>
             Personal Info
           </span>
         </div>
 
-        <div className={`bg-${color} `} style={{ width: "2rem", height: "5px", borderRadius: "5px" }} />
-        <br />
+        <div className={`bg-${color} mb-3`} style={{ width: "2rem", height: "5px", borderRadius: "5px" }} />
+
         <div className='card bg-darkBule px-3 py-4'>
           <div className='w-100 h-100 d-md-none ' style={{ border: `10px solid ${color}`, borderRadius: "8px" }}>
 
@@ -79,7 +79,18 @@ function AboutMe() {
             {
               myDetails.map((item, index) => (
                 <>
-                  <div className='col-md-6 col-12 d-flex align-items-center my-md-2 my-0'>
+                  <div className='col-md-6 col-12 d-flex align-items-start my-md-2 my-0'>
+                    <div className='d-flex align-items-center pe-2'>
+                      <i className='fas fa-angle-double-right text-red'></i>
+                      <span className='px-2'>{item.key}</span>
+                      <div className=''>-</div>
+                    </div>
+                    <div className=' d-flex'>
+                      
+                      <div className={`text-dull text-wrap `}>{item.value}</div>
+                    </div>
+                  </div>
+                  {/* <div className='col-md-6 col-12 d-flex align-items-center my-md-2 my-0'>
                     <i className='fas fa-angle-double-right text-red'></i>
                     <div className='ps-3 '>
 
@@ -88,29 +99,27 @@ function AboutMe() {
                       <span className='ps-2 text-dull '>{item.value}</span>
 
                     </div>
-                  </div>
+                  </div> */}
                 </>
               ))
             }
           </div>
-          <div>
+          {/* <div>
             {[1, 2, 4, 2].map((item, index) => (
               <></>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
-      <br />
-
-      <div>
-        <div className='mb-2'>
+      <div className='' >
+        <div className='my-2 '>
           <span style={{ fontSize: "1.2rem" }}>
             Services
           </span>
         </div>
         <div className={`bg-${color} `} style={{ width: "2rem", height: "5px", borderRadius: "5px" }} />
         <br />
-        <div className='card bg-darkBule px-3 py-4'>
+        {/* <div className='card bg-darkBule px-3 py-4'>
           <div className='col-12 d-flex flex-md-row flex-column mt-3'>
             <div className='  h-25 col-md-6 col-12'>
               coming soon
@@ -118,9 +127,9 @@ function AboutMe() {
 
 
           </div>
-        </div>
+        </div> */}
       </div>
-      <br />
+
     </div>
   )
 }

@@ -45,6 +45,7 @@
   color: #a8a8a8;
 }
 
+
 .bg-darkBule {
   background-color: #1d3047;
 }
@@ -321,10 +322,14 @@
 
 
 
+
 @media only screen and (max-width: 600px) {
   .sideBar {
     width: 35px;
   }
+  /* .left-wrapper-containt{
+    
+  } */
 
   .contentBox {
     min-height: 21vh;
@@ -359,6 +364,5 @@
 
     font-size: 1rem;
   }
-
-
+ 
 }
