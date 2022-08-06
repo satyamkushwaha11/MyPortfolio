@@ -376,7 +376,7 @@
 
 .wrapTheLine{
   display:block;
-  width: calc(100%-20px);
+  /* width: calc(100%-20px); */
   word-wrap:break-word;
 }
 
