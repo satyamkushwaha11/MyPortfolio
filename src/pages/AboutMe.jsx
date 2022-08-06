@@ -79,36 +79,22 @@ function AboutMe() {
             {
               myDetails.map((item, index) => (
                 <>
-                  <div className='col-md-6 col-12 d-flex align-items-start my-md-2 my-0'>
-                    <div className='d-flex align-items-center pe-2'>
-                      <i className='fas fa-angle-double-right text-red'></i>
+                  <div key={index} className='col-md-6 col-12 d-flex align-items-start my-md-2 my-0'>
+                    <div className='d-flex align-items-start pe-2'>
+                      <i className='fas fa-angle-double-right text-red mt-1'></i>
                       <span className='px-2'>{item.key}</span>
                       <div className=''>-</div>
                     </div>
                     <div className=' d-flex'>
-                      
-                      <div className={`text-dull text-wrap `}>{item.value}</div>
+                      <div className={`text-dull text-wrap wrapTheLine `}>{item.value}</div>
                     </div>
                   </div>
-                  {/* <div className='col-md-6 col-12 d-flex align-items-center my-md-2 my-0'>
-                    <i className='fas fa-angle-double-right text-red'></i>
-                    <div className='ps-3 '>
-
-                      <span className='pe-2'>{item.key}</span>
-                      <span className=''>-</span>
-                      <span className='ps-2 text-dull '>{item.value}</span>
-
-                    </div>
-                  </div> */}
                 </>
               ))
             }
           </div>
-          {/* <div>
-            {[1, 2, 4, 2].map((item, index) => (
-              <></>
-            ))}
-          </div> */}
+          
+        
         </div>
       </div>
       <div className='' >
