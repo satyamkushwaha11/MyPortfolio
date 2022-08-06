@@ -34,12 +34,19 @@ const cardList = [
     color: "text-green",
     pageNo: 3
   },
+  // {
+  //   image: ContactMeIcon,
+  //   text: "Contact Me",
+  //   color: "text-dark-yellow",
+  //   pageNo: 4
+  // },
   {
     image: ContactMeIcon,
     text: "Contact Me",
     color: "text-dark-yellow",
     pageNo: 4
   },
+  
 ]
 
 function MainPage() {
