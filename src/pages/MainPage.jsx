@@ -1,68 +1,103 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ContentBox from '../components/ContentBox'
+import DynamicText from '../components/DynamicText'
 import {
   AboutMeIcon,
   MyResumeIcon,
   MyPortfolioIcon,
   ContactMeIcon
 } from "../components/Icons"
+import MyText from '../components/Text'
+import { UserContext } from '../App';
+
+import AboutMe from './AboutMe'
+import ContactMe from './ContactMe'
+import MyPortfolioPage from './MyPortfolioPage'
+import Resume from './Resume'
 
 const cardList = [
   {
     image: AboutMeIcon,
     text: "About Me",
-    color:"text-orange"
+    color: "text-orange",
+    pageNo: 1
   },
   {
     image: MyResumeIcon,
     text: "My Resume",
-    color:"text-purpul"
+    color: "text-purpul",
+    pageNo: 2
   },
   {
     image: MyPortfolioIcon,
     text: "My Portfolio",
-    color:"text-green"
+    color: "text-green",
+    pageNo: 3
   },
+  // {
+  //   image: ContactMeIcon,
+  //   text: "Contact Me",
+  //   color: "text-dark-yellow",
+  //   pageNo: 4
+  // },
   {
     image: ContactMeIcon,
     text: "Contact Me",
-    color:"text-dark-yellow"
+    color: "text-dark-yellow",
+    pageNo: 4
   },
+  
 ]
 
 function MainPage() {
-  return (
-    <div className='mainPage_contianer w-100 h-100'>
-      <div className='mx-3  mainPageHeader' >
-        <div className='mainPageHeader_heading'>
-          <div>
-            I'M
-            <span className='text-red'> SATYAM KUSHWAHA</span>
+  const { color, page,} = useContext(UserContext)
+  console.log(page, 'ljljjjjjjjjjjjjjjjj');
+
+  const HomeContent = () => {
+    return (
+      <>
+        <div className=' mainPageHeader' >
+          <div className='mainPageHeader_heading'>
+            <MyText textColor={color} className="fw-bolder">I'M SATYAM KUSHWAHA</MyText>
+          </div>
+          <DynamicText />
+        </div>
+        <div className='  mainPage_containt'>
+          <div className='d-flex flex-wrap'>
+            {
+              cardList.map((item, index) => (
+                <ContentBox key={index} image={() => <item.image className=' ' />} text={item.text} textColor={item.color} pageNo={item.pageNo} />
+              ))
+            }
           </div>
         </div>
-        <div className='bottom-heading-wrapper'>  
-          <div className='static-text  mx-2'>As a </div>
-          <ul class="dynamic-texts">
-            <li><span>Web Developer</span></li>
-            <li><span>MERN Stack</span></li>
-          </ul>
-        </div>
-
-      </div>
-      <div className='mx-3  mainPage_containt'>
-        <div className='d-flex flex-wrap'>
-          {
-            cardList.map((item, index) => (
-              <ContentBox key={index} image={() => <item.image />} text={item.text} textColor={item.color} />
-
-            ))
-          }
-        </div>
+      </>)
+  }
 
 
-      </div>
+
+  return (
+    <div className='mainPage_contianer w-100 h-100 '>
+      {(() => {
+        switch (page) {
+          case 0:
+            return <HomeContent />
+          case 1:
+            return <AboutMe />
+          case 2:
+            return <Resume />
+          case 3:
+            return <MyPortfolioPage />
+          case 4:
+            return <ContactMe />
+          default:
+            break;
+        }
+      })()}
+
     </div>
   )
 }
 
 export default MainPage
+
