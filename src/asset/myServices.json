@@ -1,0 +1,22 @@
+[
+  {
+    "servicePoster": "front-end_development.webp",
+    "serviceName": "Frontend Development",
+    "serviceDescription": "I can develop your frontend UI with React, nextjs, html, css, bootstrap, materialUI and javascript etc. "
+  },
+  {
+    "servicePoster": "backend-development.webp",
+    "serviceName": "Backend Development",
+    "serviceDescription": "I can develop your app's backend part with the help of ExpressJs, Nodejs and MongoDB "
+  },
+  {
+    "servicePoster": "app-development.webp",
+    "serviceName": "App Development",
+    "serviceDescription": "React Native is used By me for creating a hybrid app ."
+  },
+  {
+    "servicePoster": "bloackchain.jpg",
+    "serviceName": "Blockchain",
+    "serviceDescription": "We can also provide web3 technologies with web and app as well."
+  }
+]

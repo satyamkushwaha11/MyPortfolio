@@ -1,0 +1,51 @@
+{
+  "web": {
+    "name": "Web",
+    "projects": [
+      {
+        "projectImage": "",
+        "projectName": "My Portfolio",
+        "projectWebUrl": "https://satyamkushwaha.netlify.app",
+        "projectGithubUrl": "https://github.com/satyamkushwaha11/myPortfolio",
+        "projectDescription": "My Portfolio website"
+      },
+      {
+        "projectImage": "",
+        "projectName": "INotebook",
+        "projectWebUrl": "",
+        "projectGithubUrl": "",
+        "projectDescription": "INotebook"
+      },
+      {
+        "projectImage": "",
+        "projectName": "BlogApp",
+        "projectWebUrl": "",
+        "projectGithubUrl": "",
+        "projectDescription": "BlogApp"
+      },
+      {
+        "projectImage": "",
+        "projectName": "ChatApp",
+        "projectWebUrl": "",
+        "projectGithubUrl": "",
+        "projectDescription": "ChatApp"
+      }
+    ]
+  },
+  "mobile": {
+    "name": "Mobile Project",
+    "projects": [
+      {
+        "projectImage": "",
+        "projectName": "",
+        "projectWebUrl": "",
+        "projectGithubUrl": "",
+        "projectDescription": "My Portfolio website"
+      }
+    ]
+  },
+  "Blockchain": {
+    "name": "Blockchain",
+    "projects": []
+  }
+}

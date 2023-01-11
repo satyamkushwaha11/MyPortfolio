@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import MyText from '../components/Text'
 import { UserContext } from '../App';
 import MyImage from '../components/MyImage';
+import MyServieces from '../components/MyServices'
 
 const myDetails = [
   {
@@ -53,7 +54,7 @@ function AboutMe() {
           <MyText textColor={color} className="fw-bolder">{text}</MyText>
         </div>
       </div>
-   
+
       <div className=''>
         <div className='mb-2'>
           <span style={{ fontSize: "1.2rem" }}>
@@ -73,7 +74,7 @@ function AboutMe() {
           </div>
           <br />
           <div className='col-12 col-md-10'>
-            I am a MERN Stack Web Developer from Noida-UP,India. I am very passionate and dedicated to my work. I have 5 years more work experience. And enjoy working in a team or individual.
+            I am a MERN Stack Web Developer from Noida-UP,India. I am very passionate and dedicated to my work. I have 1.5+ years of work experience. And enjoy working in a team or individual.
           </div>
           <div className='col-12 d-flex flex-md-row flex-wrap flex-column mt-3'>
             {
@@ -93,10 +94,9 @@ function AboutMe() {
               ))
             }
           </div>
-          
-        
         </div>
       </div>
+      <br />
       <div className='' >
         <div className='my-2 '>
           <span style={{ fontSize: "1.2rem" }}>
@@ -104,17 +104,14 @@ function AboutMe() {
           </span>
         </div>
         <div className={`bg-${color} `} style={{ width: "2rem", height: "5px", borderRadius: "5px" }} />
-        <br />
-        {/* <div className='card bg-darkBule px-3 py-4'>
-          <div className='col-12 d-flex flex-md-row flex-column mt-3'>
-            <div className='  h-25 col-md-6 col-12'>
-              coming soon
-            </div>
-
-
-          </div>
-        </div> */}
+        <br/>
+        <div className='card bg-darkBule p-3'>
+          {/* <h3>Comming Soon......</h3> */}
+           <MyServieces/>
+        </div>
       </div>
+      <br />
+      <br />
 
     </div>
   )
