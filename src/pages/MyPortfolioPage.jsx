@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import MyText from '../components/Text'
 import { UserContext } from '../App';
 
@@ -6,7 +6,7 @@ import { UserContext } from '../App';
 
 function MyPortfolioPage() {
   const { color, text, handelCancelPage } = useContext(UserContext)
-  const [tabSelected, setTabSelected] = useState(1)
+  // const [tabSelected, setTabSelected] = useState(1)
 
   return (
     <div className='h-100 px-3 position-relative '>
