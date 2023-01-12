@@ -7,7 +7,6 @@ const MyText = (props) => {
         textSize,
         children
     } = props
-    console.log(textColor, 'llasdlfalsd');
     const lastLetter=children.slice(children.indexOf(' ') + 1)
     const firstLetter=children.slice(0, children.indexOf(' '))
    

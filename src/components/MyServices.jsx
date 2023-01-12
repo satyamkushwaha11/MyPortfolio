@@ -7,7 +7,6 @@ const MyServices = () => {
     const [myServicesList, setMyServicesList] = useState()
     useEffect(() => {
         setMyServicesList(data)
-        console.log(data, 'asdfasdfasd')
     }, [])
 
     return (
