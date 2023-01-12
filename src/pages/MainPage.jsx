@@ -46,12 +46,11 @@ const cardList = [
     color: "text-dark-yellow",
     pageNo: 4
   },
-  
+
 ]
 
 function MainPage() {
-  const { color, page,} = useContext(UserContext)
-  console.log(page, 'ljljjjjjjjjjjjjjjjj');
+  const { color, page, } = useContext(UserContext)
 
   const HomeContent = () => {
     return (
@@ -66,7 +65,13 @@ function MainPage() {
           <div className='d-flex flex-wrap'>
             {
               cardList.map((item, index) => (
-                <ContentBox key={index} image={() => <item.image className=' ' />} text={item.text} textColor={item.color} pageNo={item.pageNo} />
+                <ContentBox
+                  key={index}
+                  image={() => <item.image className=' ' />}
+                  text={item.text}
+                  textColor={item.color}
+                  pageNo={item.pageNo}
+                />
               ))
             }
           </div>

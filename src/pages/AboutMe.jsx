@@ -22,8 +22,8 @@ const myDetails = [
     value: "satyamkushwaha1101@gmail.com"
   },
   {
-    key: "Date of Birth",
-    value: "11 August 2001"
+    key: "D.O.B",
+    value: "11-August-2001"
   },
   {
     key: "Address",

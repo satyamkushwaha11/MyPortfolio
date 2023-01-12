@@ -25,6 +25,7 @@ function Resume() {
           ssd
         </div>
       </div>
+      
     </div>
   )
 }

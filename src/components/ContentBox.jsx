@@ -5,10 +5,8 @@ import { UserContext } from '../App';
 
 function ContentBox(props) {
   const {setColor,setText,setIcon,setPage}=useContext(UserContext)
-  console.log(props, 'oooooooooooooo');
 
   const handleChange=()=>{
-    console.log("sdfsad");
     setColor(props.textColor)
     setText(props.text)
     setIcon(props.image)
@@ -17,9 +15,9 @@ function ContentBox(props) {
 
   // const text = props.text
   return (
-    <div className=' contentBox col-12 col-md-6 p-3 btn border-0' onClick={handleChange} >
+    <div className=' contentBox col-12 col-md-6 p-3 btn border-0 ' onClick={handleChange} >
 
-      <div className='card contentBox_card  w-100 h-100'>
+      <div className={`card contentBox_card  w-100 h-100 ${'menu_'+props.textColor}`}>
         <div className={`contentBox_card_img my-3 fa-3x ${props.textColor}`}>
           {/* {props.children} */}
           {props.image()}

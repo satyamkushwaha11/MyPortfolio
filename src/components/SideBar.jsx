@@ -3,7 +3,6 @@ import MyText from './Text'
 import { UserContext } from '../App';
 function SideBar(props) {
   const { color, text, icon } = useContext(UserContext)
-  console.log(icon, 'dsadf');
   return (
 
     < >
