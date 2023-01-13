@@ -7,7 +7,7 @@ export const UserContext = createContext();
 
 function App() {
   const [color, setColor] = useState("text-red");
-  const [text, setText] = useState("Hellow World");
+  const [text, setText] = useState("Hello World");
   const [icon,setIcon]=useState("")
   const [page,setPage]=useState(0)
 
