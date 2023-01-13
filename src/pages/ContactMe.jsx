@@ -8,8 +8,29 @@ const personalInfo = {
   Email: ["satyamkushwaha1101@gmail.com", <i class="fas fa-envelope " />],
   Website: ["http://www.satyamkushwaha.netlify.com", <i className={"fas fa-globe  "}></i>
   ],
-
 }
+const socialMedia = [
+  {
+    "icon": <i class="fa-brands fa-facebook-f" ></i>,
+    "link": "https://www.facebook.com/people/Satyam-Kushwaha/100010585542580/?sk=about"
+  },
+  {
+    "icon": <i class="fa-brands fa-twitter"></i>,
+    "link": "https://twitter.com/Satyam0kushwaha"
+  },
+  {
+    "icon": <i class="fa-brands fa-linkedin-in"></i>,
+    "link": "https://www.linkedin.com/in/satyam-kushwaha-783573205/"
+  },
+  {
+    "icon": <i class="fa-brands fa-github"></i>,
+    "link": "https://github.com/satyamkushwaha11"
+  },
+  {
+    "icon": <i class="fa-brands fa-instagram"></i>,
+    "link": "https://www.instagram.com/satyamkushwaha84/"
+  }
+]
 
 function ContactMe() {
   const { color, text, handelCancelPage } = useContext(UserContext)
@@ -49,21 +70,15 @@ function ContactMe() {
             <div className=" col-md-6 col-12 my-3">
               <div className="mb-2 text-red">Social Media</div>
               <div className="d-flex  align-items-center ">
-                <div className='socialIcon'>
-                  <i class="fa-brands fa-facebook-f"></i>
-                </div>
-                <div className='socialIcon'>
-                  <i class="fa-brands fa-twitter"></i>
-                </div>
-                <div className='socialIcon'>
-                  <i class="fa-brands fa-linkedin-in"></i>
-                </div>
-                <div className='socialIcon'>
-                  <i class="fa-brands fa-github"></i>
-                </div>
-                <div className='socialIcon'>
-                  <i class="fa-brands fa-instagram"></i>
-                </div>
+                {
+                  socialMedia.map((item, index) => (
+                    <div className='socialIcon' key={index}>
+                      <a href={item?.link} rel="noreferrer"   target={'_blank'}>
+                        {item?.icon || <i class="fa-brands fa-facebook-f"></i>}
+                      </a>
+                    </div>
+                  ))
+                }
               </div>
             </div>
           </div>
@@ -101,7 +116,7 @@ function ContactMe() {
           </div>
           <br />
           <div className="d-flex justify-content-center">
-            <button  className='btn border-light col-md-4 col-12'>
+            <button className='btn border-light col-md-4 col-12 sendMsgBtn'>
               <span className="mx-2 text-light"><i class="fa-solid fa-paper-plane"></i></span>
               <span className='text-light'>Send</span>
               <span className='text-red'>Message</span>

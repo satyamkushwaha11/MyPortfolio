@@ -269,6 +269,19 @@
   animation: slide 8s steps(2) infinite;
 }
 
+.downloadPdfBtn:hover{
+   border:1px solid var(--lightPurpulColor) !important;
+   box-shadow: 0 0 5px var(--lightPurpulColor);
+}
+.socialIcon:hover{
+  border:1px solid var(--redColor) !important; 
+  box-shadow: 0 0 15px var(--darkYellowColor);
+}
+.sendMsgBtn:hover{
+  border:1px solid var(--redColor) !important;
+  box-shadow: 0 0 5px var(--redColor);
+}
+
 
 
 

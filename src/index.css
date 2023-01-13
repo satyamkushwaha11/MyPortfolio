@@ -13,3 +13,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.react-pdf__Page__textContent,
+.react-pdf__Page__annotations{
+  display: none;
+}
+
+.react-pdf__Page__canvas{
+  width: 100% !important;
+  height: 60% !important;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
