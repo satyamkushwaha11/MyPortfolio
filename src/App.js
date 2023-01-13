@@ -13,7 +13,7 @@ function App() {
 
   const handelCancelPage=()=>{
     setColor("text-red")
-    setText("Hellow World")
+    setText("Hello World")
     setIcon("")
     setPage(0)
   }  
